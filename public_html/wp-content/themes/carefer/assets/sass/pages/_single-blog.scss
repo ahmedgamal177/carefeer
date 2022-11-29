@@ -1,0 +1,459 @@
+.single-blog {
+    .content {
+        width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 999px) {
+            width: 100%;
+        }
+        .share-icons {
+            width: 100px;
+            h3 {
+                font-size: 22px;
+                font-family: "circularxxbold";
+                padding-bottom: 25px;
+                body.rtl & {
+                    font-family: "Droid Arabic Kufi";
+                }
+            }
+            .addtoany_list {
+                display: flex;
+                flex-direction: column;
+                .addtoany_share {
+                    display: none;
+                }
+                .a2a_button_facebook,
+                .a2a_button_twitter,
+                .a2a_button_linkedin {
+                    .a2a_label {
+                        display: none;
+                    }
+                    .a2a_s__default {
+                        background-color: #70707075 !important;
+                        &.a2a_s_facebook:hover {
+                            background-color: rgb(24, 119, 242) !important;
+                        }
+                    }
+                }
+                .a2a_button_facebook,
+                .a2a_button_twitter,
+                .a2a_button_linkedin {
+                    &:hover {
+                        .a2a_s__default {
+                            opacity: 1;
+                            &.a2a_s_facebook {
+                                background-color: rgb(24, 119, 242) !important;
+                            }
+                            &.a2a_s_twitter {
+                                background-color: rgb(29, 155, 240) !important;
+                            }
+                            &.a2a_s_linkedin {
+                                background-color: rgb(0, 123, 181) !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .main-content {
+            width: calc(100% - 100px - 150px);
+            @media (max-width: 999px) {
+                width: 100%;
+            }
+            .top {
+                .breadcrumb {
+                    p {
+                        font-size: 14px;
+                        font-family: "circularxxmedium";
+                        display: flex;
+                        column-gap: 5px;
+                        align-items: center;
+                        body.rtl & {
+                            font-family: 'Droid Arabic Kufi Regular';
+                        }
+                        @media (max-width: 999px) {
+                            font-size: 12px;
+                        }
+                        a {
+                            color: #46a1f8;
+                        }
+                        span {
+                            color: #707070;
+                            display: inline-block;
+                            width: 200px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            padding: 2px 0;
+                            @media (max-width: 767px) {
+                                width: 200px;
+                                margin-top: -3px;
+                            }
+                        }
+                    }
+                }
+                .category {
+                    display: block;
+                    margin: 25px 0;
+                    width: fit-content;
+                    background-color: rgba(70, 161, 248, 15%);
+                    color: #46a1f8;
+                    font-size: 14px;
+                    font-family: "circularxxmedium";
+                    padding: 10px;
+                    body.rtl & {
+                        font-family: 'Droid Arabic Kufi Regular';
+                    }
+                    @media (max-width: 999px) {
+                        font-size: 12px;
+                    }
+                }
+                .list-mob {
+                    @media (max-width: 999px) {
+                        display: flex !important;
+                        align-items: center;
+                        justify-content: space-between;
+                        .addtoany_list {
+                            display: flex;
+                            .addtoany_share {
+                                display: none;
+                            }
+                            .a2a_button_facebook,
+                            .a2a_button_twitter,
+                            .a2a_button_linkedin {
+                                .a2a_label {
+                                    display: none;
+                                }
+                                .a2a_s__default {
+                                    background-color: #70707075 !important;
+                                    height: 20px;
+                                    line-height: 24px;
+                                    width: 20px;
+                                    &.a2a_s_facebook:hover {
+                                        background-color: rgb(24, 119, 242) !important;
+                                    }
+                                }
+                            }
+                            .a2a_button_facebook,
+                            .a2a_button_twitter,
+                            .a2a_button_linkedin {
+                                &:hover {
+                                    .a2a_s__default {
+                                        opacity: 1;
+                                        &.a2a_s_facebook {
+                                            background-color: rgb(24, 119, 242) !important;
+                                        }
+                                        &.a2a_s_twitter {
+                                            background-color: rgb(29, 155, 240) !important;
+                                        }
+                                        &.a2a_s_linkedin {
+                                            background-color: rgb(0, 123, 181) !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                h1 {
+                    font-size: 30px;
+                    font-family: "circularxxmedium";
+                    line-height: 50px;
+                    body.rtl & {
+                        font-family: 'Droid Arabic Kufi Regular';
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 28px;
+                        line-height: 36px;
+                    }
+                }
+                .boxes {
+                    display: flex;
+                    margin: 20px 0 40px;
+                    column-gap: 90px;
+                    @media (max-width: 999px) {
+                        display: none;
+                        column-gap: 20px;
+                    }
+                    div {
+                        font-size: 14px;
+                        font-family: "circularxxregular";
+                        background-repeat: no-repeat;
+                        background-size: 18px;
+                        background-position: left center;
+                        padding: 10px 0px 10px 25px;
+                        body.rtl & {
+                            font-family: 'Droid Arabic Kufi Regular';
+                        }
+                        @media (max-width: 999px) {
+                            font-size: 10px;
+                            background-size: 13px;
+                            padding: 10px 0px 10px 16px;
+                            body.rtl & {
+                                padding: 10px 16px 10px 0px;
+                            }
+                        }
+                        body.rtl & {
+                            background-position: center right;
+                            padding: 10px 25px 10px 0px;
+                        }
+                        &.clock {
+                            background-image: url(../images/clock.png);
+                        }
+                        &.name {
+                            background-image: url(../images/person.png);
+                        }
+                        &.date {
+                            background-image: url(../images/date.png);
+                        }
+                    }
+                }
+            }
+            .hero-image {
+                width: 100%;
+                margin-bottom: 35px;
+                img {
+                    width: 100%;
+                }
+                @media (max-width: 999px) {
+                    margin-top: 20px;
+                }
+            }
+            .middle {
+                p {
+                    font-size: 18px;
+                    font-family: "circularxxregular";
+                    padding-bottom: 60px;
+                    line-height: 35px;
+                    body.rtl & {
+                        font-family: 'Droid Arabic Kufi Regular';
+                    }
+                    @media (max-width: 767px) {
+                        padding-bottom: 40px;
+                    }
+                }
+                h2 {
+                    font-size: 32px;
+                    font-family: "circularxxmedium";
+                    padding-bottom: 30px;
+                    line-height: 50px;
+                    body.rtl & {
+                        font-family: 'Droid Arabic Kufi Regular';
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 30px;
+                        line-height: 36px;
+                    }
+                }
+                h3 {
+                    font-size: 30px;
+                    font-family: "circularxxmedium";
+                    padding-bottom: 30px;
+                    line-height: 50px;
+                    body.rtl & {
+                        font-family: 'Droid Arabic Kufi Regular';
+                    }
+                }
+                a {
+                    color: #46a1f8;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            .bottom {
+                background-color: #ebedfb;
+                padding: 15px 40px;
+                display: flex;
+                align-items: center;
+                column-gap: 40px;
+                margin-bottom: 100px;
+                @media (max-width: 767px) {
+                    padding: 25px 20px;
+                    column-gap: 10px;
+                }
+                .image {
+                    width: 90px;
+                    @media (max-width: 767px) {
+                        width: 80px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                .text {
+                    p {
+                        font-size: 14px;
+                        font-family: "circularxxmedium";
+                        padding-bottom: 9px;
+                        body.rtl & {
+                            font-family: 'Droid Arabic Kufi Regular';
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 14px;
+                        }
+                    }
+                    span {
+                        font-size: 14px;
+                        font-family: "circularxxlight";
+                        body.rtl & {
+                            font-family: 'Droid Arabic Kufi Regular';
+                            font-weight: 300px;
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .related-blogs {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        .tagline {
+            color: #46a1f8;
+            font-size: 18px;
+            font-family: "circularxxregular";
+            @media (max-width: 767px) {
+                font-size: 20px;
+            }
+            body.rtl & {
+                font-family: 'Droid Arabic Kufi Regular';
+            }
+        }
+        .title {
+            font-size: 30px;
+            font-family: "circularxxmedium";
+            margin: 20px 0;
+            @media (max-width: 767px) {
+                font-size: 25px;
+                margin: 20px 0;
+            }
+            body.rtl & {
+                font-family: 'Droid Arabic Kufi Regular';
+            }
+        }
+        .top-para {
+            font-size: 18px;
+            color: #707070;
+            display: block;
+            font-family: "circularxxregular";
+            width: 530px;
+            margin: 0 auto;
+            line-height: 25px;
+            @media (max-width: 767px) {
+                font-size: 18px;
+            }
+            body.rtl & {
+                font-family: 'Droid Arabic Kufi Regular';
+            }
+            @media (max-width: 999px) {
+                width: 100%;
+            }
+        }
+        .btn-single {
+            display: block;
+            width: fit-content;
+            margin: 25px auto 0px;
+            background-color: #f08f24;
+            color: white;
+            border-radius: 10px;
+            font-size: 18px;
+            font-family: "circularxxregular";
+            padding: 11px 50px;
+            body.rtl & {
+                font-family: 'Droid Arabic Kufi Regular';
+            }
+            &:hover {
+                background-color: #b26a1a;
+            }
+            @media (max-width: 999px) {
+                margin: 35px auto 0px;
+            }
+        }
+        .blogs {
+            display: flex;
+            margin: 70px 0 0px;
+            // padding-bottom: 100px;
+            justify-content: center;
+            column-gap: 20px;
+            @media (max-width: 999px) {
+                margin: 50px 0 0;
+                padding-bottom: 50px;
+            }
+            @media (max-width: 767px) {
+                flex-direction: column;
+                column-gap: 0;
+                row-gap: 20px;
+            }
+            .single-blog {
+                width: calc(100% / 3);
+                border-radius: 12px;
+                box-shadow: 0 4px 31px rgb(0 0 0 / 10%);
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
+                .image {
+                    height: 200px;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .bottom {
+                    padding: 20px;
+                    .text {
+                        text-align: $start;
+                        .category {
+                            background-color: rgba(112, 112, 112, 0.15);
+                            color: #707070;
+                            font-size: 10px;
+                            font-family: "circularxxregular";
+                            padding: 0px 10px;
+                            display: block;
+                            width: fit-content;
+                            body.rtl & {
+                                font-family: 'Droid Arabic Kufi Regular';
+                            }
+                        }
+                        h3 {
+                            font-size: 17px;
+                            font-family: "circularxxmedium";
+                            line-height: 35px;
+                            padding: 10px 0;
+                            @media (max-width: 767px) {
+                                font-size: 22px;
+                            }
+                            // height: 150px;
+                            body.rtl & {
+                                font-family: 'Droid Arabic Kufi Regular';
+                            }
+                        }
+                        span {
+                            font-size: 13px;
+                            font-family: "circularxxregular";
+                            line-height: 25px;
+                            body.rtl & {
+                                font-family: 'Droid Arabic Kufi Regular';
+                            }
+                        }
+                        p {
+                            font-size: 13px;
+                            font-family: "circularxxregular";
+                            padding-top: 20px;
+                            body.rtl & {
+                                font-family: 'Droid Arabic Kufi Regular';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

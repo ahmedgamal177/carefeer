@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,sBAAsB",
+    "sources": [
+        "direction-rtl.scss"
+    ],
+    "names": [],
+    "file": "direction-rtl.css"
+}

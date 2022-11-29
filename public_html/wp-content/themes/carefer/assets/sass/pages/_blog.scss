@@ -1,0 +1,313 @@
+.blog {
+    // padding-bottom: 100px;
+    .content {
+        .top-text {
+            margin-bottom: 100px;
+            @media (max-width: 999px) {
+                margin-bottom: 50px;
+            }
+            h1 {
+                font-size: 40px;
+                font-family: "circularxxbold";
+                line-height: 60px;
+                text-align: center;
+                body.rtl & {
+                    font-family: "Droid Arabic Kufi";
+                }
+                @media (max-width: 999px) {
+                    font-size: 35px;
+                    line-height: 45px;
+                }
+            }
+            .tagline {
+                font-size: 22px;
+                color: #707070;
+                padding: 20px 0 50px;
+                font-family: "circularxxregular";
+                text-align: center;
+                body.rtl & {
+                    font-family: "Droid Arabic Kufi Regular";
+                    font-weight: normal;
+                }
+                @media (max-width: 999px) {
+                    padding: 40px 0;
+                    font-size: 19px;
+                    line-height: 30px;
+                }
+            }
+            .box {
+                a {
+                    display: flex;
+                    box-shadow: 0 4px 31px rgb(0 0 0 / 10%);
+                    justify-content: space-between;
+                    border-radius: 10px;
+                    height: fit-content;
+                    align-items: center;
+                    @media (max-width: 999px) {
+                        flex-direction: column-reverse;
+                        box-shadow: none;
+                    }
+                    .text {
+                        width: calc(40% - 60px);
+                        padding: 50px 0px 50px 40px;
+                        @media (max-width: 999px) {
+                            background: white;
+                            width: 90%;
+                            margin: -60px auto 0;
+                            box-shadow: 0 4px 31px rgb(0 0 0 / 10%);
+                            padding: 40px 20px;
+                            z-index: 1;
+                        }
+                        body.rtl & {
+                            padding: 50px 40px 50px 0px;
+                        }
+                        .category {
+                            font-size: 18px;
+                            padding: 40px 0 75px;
+                            font-family: "circularxxmedium";
+                            body.rtl & {
+                                font-family: "Droid Arabic Kufi Regular";
+                                font-weight: normal;
+                            }
+                            @media (max-width: 767px) {
+                                font-size: 14px;
+                            }
+                        }
+                        h3 {
+                            font-size: 36px;
+                            font-family: "circularxxmedium";
+                            padding: 10px 0;
+                            line-height: 50px;
+                            body.rtl & {
+                                font-family: "Droid Arabic Kufi";
+                                line-height: 60px;
+                            }
+                            @media (max-width: 767px) {
+                                font-size: 28px;
+                                line-height: 40px !important;
+                            }
+                        }
+                        div {
+                            font-size: 18px;
+                            font-family: "circularxxregular";
+                            padding-bottom: 21px;
+                            line-height: 26px;
+                            body.rtl & {
+                                font-family: "Droid Arabic Kufi Regular";
+                                font-weight: normal;
+                            }
+                            @media (max-width: 767px) {
+                                font-size: 18px;
+                                line-height: 30px;
+                                color: #7e848d;
+                            }
+                        }
+                        .date {
+                            font-size: 16px;
+                            font-family: "circularxxregular";
+                            display: block;
+                            text-align: $end;
+                            body.rtl & {
+                                font-family: "Droid Arabic Kufi";
+                            }
+                            @media (max-width: 767px) {
+                                font-size: 14px;
+                                text-align: $start;
+                            }
+                        }
+                    }
+                    .image {
+                        width: 60%;
+                        @media (max-width: 999px) {
+                            width: 100%;
+                        }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .list {
+            h3 {
+                font-size: 30px;
+                font-family: "circularxxbold";
+                line-height: 60px;
+
+                body.rtl & {
+                    font-family: "Droid Arabic Kufi";
+                }
+                @media (max-width: 999px) {
+                    font-size: 35px !important;
+                    height: 130px !important;
+                    padding: 0px 0 0px !important;
+                }
+            }
+            .tagline {
+                font-size: 18px;
+                color: #707070;
+                padding: 20px 0 30px;
+                font-family: "circularxxregular";
+                body.rtl & {
+                    font-family: "Droid Arabic Kufi Regular";
+                    font-weight: normal;
+                }
+                @media (max-width: 999px) {
+                    padding: 40px 0;
+                    font-size: 20px;
+                    display: none;
+                }
+            }
+            .listing {
+                display: flex;
+                justify-content: space-between;
+                @media (max-width: 999px) {
+                    flex-direction: column;
+                }
+                .menu {
+                    width: 270px;
+                    @media (max-width: 999px) {
+                        width: 100%;
+                    }
+                    h4 {
+                        font-size: 25px;
+                        font-family: "circularxxbold";
+                        margin-bottom: 55px;
+                        body.rtl & {
+                            font-family: "Droid Arabic Kufi";
+                        }
+                    }
+                    label {
+                        @media (max-width: 999px) {
+                            display: flex;
+                            align-items: center;
+                            overflow: auto;
+
+                            &::-webkit-scrollbar {
+                                display: none;
+                            }
+                        }
+                        div {
+                            font-size: 18px;
+                            font-family: "circularxxregular";
+                            padding: 7px 24px;
+                            cursor: pointer;
+                            body.rtl & {
+                                font-family: "Droid Arabic Kufi Regular";
+                            }
+                            @media (max-width: 999px) {
+                                white-space: nowrap;
+                            }
+                            & ~ div {
+                                margin-top: 15px;
+                                @media (max-width: 999px) {
+                                    margin-top: 0;
+                                }
+                            }
+
+                            &:hover {
+                                color: #46a1f8;
+                                font-family: "circularxxbold";
+                                body.rtl & {
+                                    font-family: "Droid Arabic Kufi";
+                                }
+                                @media (max-width: 999px) {
+                                    color: black;
+                                }
+                            }
+                            &.active {
+                                color: #46a1f8;
+                                font-family: "circularxxbold";
+                                background-color: rgba(70, 161, 248, 12%);
+                                @media (max-width: 999px) {
+                                    color: black;
+                                    background-color: rgba(240, 143, 36, 12%);
+                                }
+                            }
+                        }
+                    }
+                }
+                .blogs {
+                    width: calc(100% - 270px - 50px);
+                    @media (max-width: 999px) {
+                        width: 100%;
+                        margin-top: 40px;
+                    }
+                    .form-row {
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        row-gap: 25px;
+                        display: none;
+
+                        &.show {
+                            display: flex;
+                        }
+                    }
+
+                    .single-blog {
+                        width: calc(100% / 2 - 13px);
+                        border-radius: 12px;
+                        box-shadow: 0 4px 31px rgb(0 0 0 / 10%);
+                        @media (max-width: 767px) {
+                            width: 100%;
+                        }
+                        .image {
+                            height: 250px;
+                            img {
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        .bottom {
+                            padding: 20px;
+                            .text {
+                                .category {
+                                    background-color: rgba(112, 112, 112, 15%);
+                                    color: #707070;
+                                    font-size: 15px;
+                                    font-family: "circularxxregular";
+                                    padding: 5px 10px;
+                                    display: block;
+                                    width: fit-content;
+                                    body.rtl & {
+                                        font-family: "Droid Arabic Kufi Regular";
+                                    }
+                                    @media (max-width: 999px) {
+                                        margin: 0 0 20px;
+                                    }
+                                }
+                                h3 {
+                                    font-size: 27px;
+                                    font-family: "circularxxmedium";
+                                    line-height: 35px;
+                                    padding: 20px 0 30px;
+                                    height: 140px;
+                                    body.rtl & {
+                                        font-family: "Droid Arabic Kufi Regular";
+                                    }
+                                }
+                                span {
+                                    font-size: 16px;
+                                    font-family: "circularxxregular";
+                                    line-height: 25px;
+                                    body.rtl & {
+                                        font-family: "Droid Arabic Kufi Regular";
+                                    }
+                                }
+                                p {
+                                    font-size: 15px;
+                                    font-family: "circularxxregular";
+                                    padding-top: 20px;
+                                    body.rtl & {
+                                        font-family: "Droid Arabic Kufi Regular";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,236 @@
+.site-footer {
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    .main-bottom {
+        padding: 20px 0 50px;
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-#{$end}: -4px;
+            @media (max-width: 999px) {
+                flex-direction: column;
+            }
+            .first {
+                width: 360px;
+                @media (max-width: 1300px) {
+                    width: 300px;
+                }
+                @media (max-width: 999px) {
+                    margin: 0 auto;
+                }
+                .top {
+                    .logo {
+                        width: 130px;
+                        @media (max-width: 999px) {
+                            width: 170px;
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    p {
+                        font-size: 13px;
+                        font-weight: bold;
+                        padding-top: 10px;
+                        font-family: "circularxxbold";
+
+                        body.rtl & {
+                            font-family: "Droid Arabic Kufi";
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .bottom {
+                    margin-top: 50px;
+                    @media (max-width: 999px) {
+                        margin-top: 30px;
+                    }
+                    .connect {
+                        display: flex;
+                        align-items: center;
+                        .image {
+                            width: 50px;
+                            margin-#{$end}: 30px;
+                            @media (max-width: 767px) {
+                                width: 30px;
+                            }
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .text {
+                            .title {
+                                font-size: 17px;
+                                padding-bottom: 15px;
+                                font-family: "circularxxregular";
+                                body.rtl & {
+                                    font-family: "Droid Arabic Kufi Regular";
+                                }
+                                @media (max-width: 767px) {
+                                    font-size: 15px;
+                                }
+                            }
+                            a {
+                                font-size: 17px;
+                                font-weight: bold;
+                                font-family: "circularxxbold";
+                                display: block;
+                                direction: ltr;
+                                @media (max-width: 767px) {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                        & ~ .connect {
+                            margin-top: 50px;
+                        }
+                    }
+                }
+            }
+            .middle {
+                padding-top: 35px;
+                width: calc(100% - 360px - 100px);
+                @media (max-width: 1300px) {
+                    width: calc(100% - 300px - 20px);
+                }
+                @media (max-width: 999px) {
+                    width: 100%;
+                    text-align: center;
+                    padding-top: 60px;
+                }
+                .list {
+                    display: flex;
+                    // column-gap: 150px;
+                    justify-content: space-between;
+                    @media (max-width: 999px) {
+                        flex-direction: column;
+                    }
+                    .single-list {
+                        width: calc(25% - 15px);
+                        @media (max-width: 999px) {
+                            width: 100%;
+                            & ~ .single-list {
+                                margin-top: 40px;
+                            }
+                        }
+
+                        .title {
+                            font-size: 15px;
+                            font-weight: bold;
+                            padding-bottom: 35px;
+                            font-family: "circularxxbold";
+
+                            body.rtl & {
+                                font-family: "Droid Arabic Kufi";
+                            }
+                            @media (max-width: 999px) {
+                                padding-bottom: 20px;
+                            }
+                        }
+                        ul {
+                            li {
+                                font-family: "circularxxregular";
+
+                                body.rtl & {
+                                    font-family: "Droid Arabic Kufi Regular";
+                                }
+                                a {
+                                    font-size: 15px;
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+
+                                & ~ li {
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            .title {
+                                padding-bottom: 20px;
+                            }
+                            ul {
+                                display: flex;
+                                width: 100%;
+                                align-items: center;
+                                justify-content: space-between;
+                                body.rtl & {
+                                    flex-direction: row-reverse;
+                                }
+                                @media (max-width: 999px) {
+                                    justify-content: center;
+                                }
+                                li {
+                                    width: calc(100% / 4);
+                                    @media (max-width: 999px) {
+                                        width: 10%;
+                                    }
+                                    & ~ li {
+                                        margin-top: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom-footer {
+        background-color: rgba(181, 181, 181, 8%);
+        @media (max-width: 999px) {
+            margin-top: 0px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media (max-width: 999px) {
+                flex-direction: column-reverse;
+            }
+            .first {
+                p {
+                    font-size: 12px;
+                    font-family: "circularxxregular";
+                    body.rtl & {
+                        font-family: "Droid Arabic Kufi Regular";
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .right {
+                display: flex;
+                width: 350px;
+                flex-direction: row-reverse;
+                column-gap: 18px;
+                /* justify-content: space-between; */
+                align-items: center;
+                @media (max-width: 999px) {
+                    margin-bottom: 40px;
+                }
+                @media (max-width: 500px) {
+                    width: 100%;
+                    justify-content: center;
+                }
+                body.rtl & {
+                    flex-direction: row-reverse;
+                }
+                .image {
+                    width: calc(100% / 5 - 25px);
+                    @media (max-width: 999px) {
+                        width: calc(17% - 25px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.otgs-development-site-front-end {
+    display: none !important;
+}

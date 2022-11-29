@@ -1,0 +1,406 @@
+.contact-us {
+    padding-bottom: 70px;
+    .grid-page {
+        padding: 50px 50px 0;
+        @media (max-width: 999px) {
+            padding: 20px 20px 0;
+        }
+    }
+    .image-hero {
+        width: 100%;
+        img {
+            width: 100% !important;
+        }
+        @media (max-width: 999px) {
+            height: 400px;
+            img {
+                height: 100%;
+            }
+        }
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 999px) {
+            flex-direction: column;
+        }
+        .text {
+            width: 500px;
+            @media (max-width: 1500px) {
+                width: 50%;
+            }
+            @media (max-width: 999px) {
+                text-align: center;
+                background: white;
+                width: 90%;
+                margin: 0px auto 0;
+                box-shadow: 0 4px 31px rgb(0 0 0 / 10%);
+                padding: 40px 20px;
+                z-index: 1;
+            }
+            h1 {
+                font-size: 40px;
+                font-family: "circularxxbold";
+                width: 500px;
+                line-height: 60px;
+                body.rtl & {
+                    font-family: "Droid Arabic Kufi";
+                }
+                @media (max-width: 999px) {
+                    margin: 0 auto;
+                    font-size: 35px;
+                    line-height: 45px;
+                }
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
+            }
+            .tagline {
+                font-size: 20px;
+                color: #707070;
+                padding: 20px 0 35px;
+                font-family: "circularxxregular";
+                body.rtl & {
+                    font-family: "Droid Arabic Kufi Regular";
+                    font-weight: normal;
+                }
+                @media (max-width: 999px) {
+                    padding: 40px 0;
+                    font-size: 20px;
+                }
+            }
+            .box {
+                width: 310px;
+                @media (max-width: 999px) {
+                    margin: 0 auto;
+                    width: 100%;
+                }
+                p {
+                    font-size: 20px;
+                    font-family: "circularxxregular";
+                    line-height: 27px;
+                    @media (max-width: 600px) {
+                        font-size: 19px;
+                    }
+                    body.rtl & {
+                        font-family: "Droid Arabic Kufi Regular";
+                        font-weight: normal;
+                    }
+                    // & ~ p {
+                    //     padding-top: 10pxs;
+                    // }
+
+                    span {
+                        font-family: "circularxxregular";
+                        direction: ltr;
+                        display: inline-block;
+                        body.rtl & {
+                            font-family: "droid_arabic_kufi";
+                            font-weight: normal;
+                        }
+                        a {
+                            font-family: "circularxxregular" !important;
+                        }
+                    }
+                }
+                & ~ .box {
+                    margin-top: 40px;
+                    @media (max-width: 999px) {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+        .form {
+            width: calc(100% - 500px - 150px);
+            @media (max-width: 1500px) {
+                width: calc(50% - 100px);
+            }
+            @media (max-width: 999px) {
+                width: 100%;
+            }
+            .fluentform {
+                form {
+                    display: flex;
+                    flex-direction: column;
+
+                    .ff-el-group {
+                        padding: 20px 0 0;
+                        margin-bottom: 0;
+                        border-bottom: 1px solid #707070;
+                        position: relative;
+
+                        .ff-el-input--label {
+                            width: 205px;
+                            label {
+                                font-family: "circularxxlight";
+                                display: inline-flex;
+                                font-weight: 600;
+                                line-height: inherit;
+                                margin-bottom: 0;
+                                body.rtl & {
+                                    font-family: "Droid Arabic Kufi Regular";
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                        .ff-el-input--content {
+                            width: 100%;
+                            input,
+                            textarea {
+                                border: none !important;
+                                box-shadow: none !important;
+                                resize: none;
+                                height: 34px;
+                                color: black !important;
+                                font-size: 16px !important;
+                                overflow: hidden;
+                                padding: 5px;
+
+                                &:focus {
+                                    background-color: #676c711f;
+                                    border-radius: 0;
+                                }
+                            }
+                        }
+                    }
+                    .ff-t-container.ff-column-container.ff_columns_total_2 {
+                        display: flex;
+                        align-items: center;
+                        @media (max-width: 767px) {
+                            display: block;
+                        }
+                    }
+                    .ff-t-column-1 {
+                        position: relative;
+                        font-size: 16px;
+                        font-family: "circularxxlight";
+
+                        body.rtl & {
+                            font-family: "Droid Arabic Kufi Regular";
+                            font-weight: normal;
+                        }
+                        .ff-el-group {
+                            border-bottom: 0;
+                            .ff-el-form-check-label {
+                                position: relative;
+                                input {
+                                    position: absolute;
+                                    width: 100%;
+                                    opacity: 0;
+                                    &:checked ~ span::before {
+                                        content: "done";
+                                        font-family: "Material Icons";
+                                        font-size: 20px;
+                                    }
+                                }
+                                span {
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+
+                                    &::before {
+                                        content: "";
+                                        width: 21px;
+                                        height: 21px;
+                                        border: 1px solid;
+                                        margin-#{$end}: 15px;
+                                    }
+                                }
+                            }
+                            &.link {
+                                position: absolute;
+                                top: 3px;
+                                #{$start}: 100px;
+                                background: white;
+                                display: block;
+                                @media (max-width: 767px) {
+                                    top: 1px;
+                                }
+                                body.rtl & {
+                                    top: 1px;
+                                    #{$start}: 70px;
+                                }
+                            }
+
+                            p {
+                                font-size: 16px;
+                                font-family: "circularxxlight";
+                                body.rtl & {
+                                    font-family: "Droid Arabic Kufi Regular";
+                                    font-weight: normal;
+                                }
+                                a {
+                                    &:hover {
+                                        text-decoration: underline;
+                                        color: black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .ff-t-column-2 {
+                        .ff-el-group {
+                            border-bottom: 0;
+                        }
+                    }
+                    .row {
+                        margin: 0;
+                        &.first_row {
+                            .col-sm-12 {
+                                padding: 0;
+                                .form-group {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    padding: 20px 0;
+                                    margin-bottom: 0;
+                                    border-bottom: 1px solid #707070;
+                                    position: relative;
+                                    // &:first-child {
+                                    //     padding: 0 0 20px;
+                                    // }
+                                    .help-block {
+                                        position: absolute;
+                                        top: 0;
+                                    }
+                                    label {
+                                        font-family: "circularxxlight";
+                                        font-size: 18px;
+                                        width: 155px;
+                                        margin: 0;
+                                        text-transform: capitalize;
+                                        body.rtl & {
+                                            font-family: "Droid Arabic Kufi Regular";
+                                            font-weight: normal;
+                                        }
+                                    }
+                                    div {
+                                        width: calc(100% - 130px);
+                                        input,
+                                        textarea {
+                                            border: none;
+                                            box-shadow: none;
+                                            resize: none;
+                                            height: 34px;
+                                            color: black;
+                                            font-size: 16px;
+                                            overflow: hidden;
+                                        }
+                                    }
+                                    // & ~ .form-group {
+                                    //     border-top: 1px solid #707070;
+                                    // }
+                                }
+                            }
+                        }
+
+                        .first_col {
+                            // width: 62%;
+                            padding: 0;
+                            position: relative;
+
+                            body.ltr & {
+                                width: fit-content;
+                                margin: 0 auto 0 0;
+                            }
+                            body.rtl & {
+                                text-align: left;
+                                margin: 0 0 0 auto;
+                            }
+                        }
+                        .last_col {
+                            // width: calc(100% - 62% - 120px);
+                            text-align: right;
+                            position: relative;
+                            body.rtl & {
+                                width: fit-content;
+                            }
+                        }
+                        .checkbox-section {
+                            .checkbox-inline {
+                                padding: 0;
+                                position: relative;
+                                font-size: 16px;
+                                font-family: "circularxxlight";
+                                display: flex;
+                                align-items: center;
+                                body.rtl & {
+                                    font-family: "Droid Arabic Kufi Regular";
+                                    font-weight: normal;
+                                }
+                                input {
+                                    opacity: 0;
+                                    position: absolute;
+                                    width: 46%;
+                                    cursor: pointer;
+                                    height: 100%;
+                                    top: 0;
+                                    #{$start}: 20px;
+                                    body.rtl & {
+                                        width: 25%;
+                                        #{$start}: 0px;
+                                    }
+                                }
+                                &::before {
+                                    content: "";
+                                    width: 21px;
+                                    height: 21px;
+                                    border: 1px solid;
+                                    margin-#{$end}: 15px;
+                                }
+                                &.active {
+                                    &::before {
+                                        content: "done";
+                                        font-family: "Material Icons";
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.last_row {
+                            margin-top: 25px !important;
+                        }
+                    }
+                    #CF630b2d5b132df_1-row-2,
+                    #CF630b5aa83cd2e_1-row-2 {
+                        display: flex;
+                        margin: 0;
+                        align-items: center;
+                        justify-content: space-between;
+                        @media (max-width: 767px) {
+                            flex-direction: column !important;
+                        }
+                    }
+                    #CF630b5aa83cd2e_1-row-2 {
+                        flex-direction: row-reverse;
+                        @media (max-width: 767px) {
+                            flex-direction: column-reverse !important;
+                        }
+                    }
+                    .ff_submit_btn_wrapper button {
+                        background: #715aa0;
+                        font-size: 16px;
+                        color: white;
+                        font-family: "circularxxmedium";
+                        padding: 10px 30px;
+                        border-radius: inherit;
+                        body.rtl & {
+                            font-family: "Droid Arabic Kufi Regular";
+                            font-weight: normal;
+                        }
+                        &:hover {
+                            background: #4e4365;
+                        }
+                    }
+                }
+            }
+            .caldera-grid .row:before,
+            .caldera-grid .row:after {
+                display: none;
+            }
+        }
+    }
+}

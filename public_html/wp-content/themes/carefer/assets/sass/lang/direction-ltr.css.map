@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,sBAAsB",
+    "sources": [
+        "direction-ltr.scss"
+    ],
+    "names": [],
+    "file": "direction-ltr.css"
+}

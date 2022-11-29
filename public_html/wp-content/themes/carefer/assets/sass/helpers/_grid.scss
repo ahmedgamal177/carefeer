@@ -1,0 +1,36 @@
+// grid
+
+// grid
+
+.grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.grid-page{
+  max-width: 1260px;
+
+  margin: 0 auto;
+  padding: 50px 20px 50px;
+  z-index: 111;
+  position: relative;
+  // @media (max-width:1300px){
+  //   padding: 50px 50px 0 ;
+  // }
+  @media (max-width:999px){
+    padding: 30px 20px 30px;
+  }
+}
+
+.grid-header {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  // @media (max-width:1300px){
+  //   padding: 10px 20px;
+  // }
+  // @media (max-width:999px){
+  //   padding: 10px 20px;
+  // }
+} 

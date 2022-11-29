@@ -1,0 +1,699 @@
+.site-header {
+    .top-header {
+        background-color: rgba(113, 90, 160, 10%);
+        .grid-header {
+            padding: 0;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            height: 35px;
+           
+        }
+        .last-blog {
+            p {
+                font-size: 12px;
+                color: #707070;
+                font-family: "circularxxregular";
+
+                body.rtl & {
+                    font-family: "Droid Arabic Kufi Regular";
+                }
+                @media (max-width: 767px) {
+                    font-size: 10px;
+                }
+
+                a {
+                    color: #f08f24;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .sec_lang {
+            .switcher_lang {
+                .wpml-ls-legacy-list-horizontal{
+                    padding: 0;
+                }
+                a {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    padding: 0;
+                    img {
+                        width: 20px;
+                        margin-#{$end}: 6px;
+
+                        @media (max-width: 767px) {
+                            width: 20px;
+                        }
+                    }
+                    .wpml-ls-native {
+                        color: #707070;
+                        font-size: 12px;
+                        padding-#{$end}: 10px;
+                        font-family: "circularxxbold";
+                        body.ltr & {
+                            font-family: "Droid Arabic Kufi";
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-header {
+        // box-shadow: 0px 4px 30px rgba(0 0 0 / 10%);
+        &.mobile-top {
+            @media (max-width: 767px) {
+                margin-top: 50px;
+            }
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            .logo {
+                width: 160px;
+                display: flex;
+                @media (max-width: 999px) {
+                    width: 120px;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            .main-nav {
+                margin: auto;
+                @media (max-width: 999px) {
+                    display: none;
+                }
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    li {
+                        width: fit-content;
+                        // padding: 30px 0;
+                        cursor: pointer;
+                        position: relative;
+                        font-family: "circularxxmedium";
+                        transition: all 0.3s;
+                        body.ltr & {
+                        }
+                        &:hover,
+                        &.active {
+                            .title,
+                            .point {
+                                color: black;
+                                font-family: "circularxxbold";
+                                &::before {
+                                    height: 6px;
+                                    content: "";
+                                    width: 100%;
+                                    background-color: black;
+                                    position: absolute;
+                                    bottom: 13px;
+                                }
+                            }
+                        }
+                        .title,
+                        .point {
+                            color: #707070;
+                            font-family: "circularxxmedium";
+                            padding: 30px 0;
+                            position: relative;
+                            &:hover,
+                            &.active {
+                                font-weight: bold;
+                                font-family: "circularxxbold";
+                                color: black;
+                                &::before {
+                                    height: 6px;
+                                    content: "";
+                                    width: 100%;
+                                    background-color: black;
+                                    position: absolute;
+                                    bottom: 13px;
+                                }
+                            }
+                        }
+                        & ~ li {
+                            margin-#{$start}: 60px;
+                            @media (max-width: 1600px) {
+                                margin-#{$start}: 50px;
+                                body.rtl & {
+                                    margin-#{$start}: 70px;
+                                }
+                            }
+                            @media (max-width: 1300px) {
+                                margin-#{$start}: 30px;
+                                body.rtl & {
+                                    margin-#{$start}: 55px;
+                                }
+                            }
+                        }
+                        .title,
+                        .point {
+                            font-size: 12px;
+                            color: #707070;
+                            font-family: "circularxxmedium";
+                            transition: all 0.3s;
+                            body.rtl & {
+                                font-size: 14px;
+                                font-family: "Droid Arabic Kufi Regular";
+                            }
+                            @media (max-width: 1300px) {
+                                font-size: 16px;
+                            }
+                            &:hover {
+                                color: black;
+                            }
+                        }
+                    }
+
+                    li.has-menu:hover {
+                        .sub-menu {
+                            display: flex;
+                            opacity: 1;
+                            pointer-events: auto;
+                            transition: all 0.3s;
+                            justify-content: space-between;
+                        }
+                    }
+                    .sub-menu {
+                        position: absolute;
+                        background-color: #fff;
+                        transition: 0.4s all ease-in-out;
+                        display: none;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: all 0.3s;
+                        z-index: 111111;
+                        top: 40px;
+                        #{$start}: -297%;
+                        border-radius: 12px;
+                        // box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
+                        box-shadow: rgb(106 114 158 / 20%) 0px 8px 80px;
+                        width: 940px;
+                        height: fit-content;
+                        @media (max-width: 1200px) {
+                            width: 990px;
+                        }
+                        body.rtl & {
+                            #{$start}: -250px;
+                        }
+                        h3 {
+                            font-size: 15px;
+                            font-weight: 500;
+                            padding-bottom: 30px;
+                            font-family: "circularxxmedium";
+                            body.rtl & {
+                                font-family: "Droid Arabic Kufi Regular";
+                            }
+                        }
+
+                        .features {
+                            padding: 30px 30px 30px;
+                            width: 62%;
+                            // body.rtl & {
+                            //     padding: 30px 30px 30px;
+                            // }
+                            ul.main-nav-list {
+                                flex-wrap: wrap;
+                                column-gap: 30px;
+                                align-items: start;
+                                padding-#{$end}: 10px;
+                                li {
+                                    margin: 0 !important;
+                                    width: calc(50% - 18px);
+                                    position: relative;
+                                    padding: 30px 0;
+                                    @media (max-width: 1200px) {
+                                        width: 100%;
+                                    }
+                                    &:hover {
+                                        &::before {
+                                            content: "";
+                                            background-image: url(../images/arrow.png);
+                                            background-color: unset;
+                                            background-repeat: no-repeat;
+                                            width: 20px;
+                                            height: 18px;
+                                            position: absolute;
+                                            background-size: contain;
+                                            #{$end}: -14px;
+                                            top: 34px;
+                                            body.rtl & {
+                                                transform: rotate(180deg);
+                                            }
+                                        }
+                                    }
+                                    a {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        .image {
+                                            width: 40px;
+                                            margin-top: 10px;
+
+                                            img {
+                                                width: 100%;
+                                            }
+                                        }
+                                        .text {
+                                            width: calc(100% - 40px - 15px);
+                                            p {
+                                                font-size: 15px;
+                                                color: black;
+                                                font-family: "circularxxmedium";
+                                                line-height: 20px;
+                                                width: 80%;
+                                                body.rtl & {
+                                                    font-family: "Droid Arabic Kufi Regular";
+                                                }
+                                            }
+                                            .description {
+                                                font-size: 15px;
+                                                color: #707070;
+                                                padding-top: 10px;
+                                                // width: 230px;
+                                                font-family: "circularxxmedium";
+                                                font-weight: normal;
+                                                line-height: 25px;
+                                                body.rtl & {
+                                                    font-family: "Droid Arabic Kufi Regular";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .join-us {
+                            background-color: #f9faff;
+                            padding: 30px 30px 30px;
+                            width: 38%;
+                            // body.rtl & {
+                            //     padding: 30px 20px 30px 30px;
+                            // }
+                            ul.main-nav-list {
+                                flex-direction: column;
+
+                                li {
+                                    margin: 0 !important;
+                                    position: relative;
+                                    width: 100%;
+                                    padding: 30px 0;
+                                    &:hover {
+                                        &::before {
+                                            content: "";
+                                            background-image: url(../images/arrow.png);
+                                            background-color: unset;
+                                            background-repeat: no-repeat;
+                                            width: 20px;
+                                            height: 18px;
+                                            position: absolute;
+                                            background-size: contain;
+                                            #{$end}: -14px;
+                                            top: 34px;
+
+                                            body.rtl & {
+                                                transform: rotate(180deg);
+                                                #{$end}: 25px;
+                                            }
+                                        }
+                                    }
+                                    a {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        .image {
+                                            width: 40px;
+                                            margin-top: 10px;
+
+                                            img {
+                                                width: 100%;
+                                            }
+                                        }
+                                        .text {
+                                            width: calc(100% - 40px - 15px);
+                                            p {
+                                                font-size: 15px;
+                                                color: black;
+                                                font-family: "circularxxmedium";
+                                                line-height: 20px;
+                                                width: 80%;
+                                                body.rtl & {
+                                                    font-family: "Droid Arabic Kufi Regular";
+                                                }
+                                            }
+                                            .description {
+                                                font-size: 12px;
+                                                color: #707070;
+                                                padding-top: 10px;
+                                                width: 230px;
+                                                line-height: 25px;
+                                                body.rtl & {
+                                                    font-family: "Droid Arabic Kufi Regular";
+                                                    font-weight: normal;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .demo {
+                @media (max-width: 999px) {
+                    display: none;
+                }
+                a {
+                    font-size: 15px;
+                    background: #715aa0;
+                    color: white;
+                    padding: 19px 54px;
+                    border-radius: 10px;
+                    font-weight: bold;
+
+                    font-family: "circularxxbold";
+
+                    body.rtl & {
+                        font-family: "Droid Arabic Kufi";
+                    }
+                    // body.rtl & {
+                    //     padding: 7px 54px;
+                    // }
+                    @media (max-width: 1300px) {
+                        font-size: 16px;
+                        padding: 19px 45px;
+                    }
+                    &:hover {
+                        background: #4e4365;
+                    }
+                }
+            }
+        }
+    }
+    .burger {
+        display: none;
+        position: absolute;
+        #{$end}: 8px;
+        top: 0;
+        width: 30px;
+        height: 60px;
+        background-image: url(../images/menu.png);
+        background-position: center;
+        background-size: 28px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+        &.active {
+            background-image: url(../images/cross.png);
+            background-size: 28px;
+        }
+        @media (max-width: 999px) {
+            display: block;
+        }
+    }
+    .mobile-nav {
+        display: none;
+        @media (max-width: 999px) {
+            display: block;
+            box-shadow: inset 0 4px 16px rgb(0 0 0 / 10%);
+        }
+        // .close {
+        //     position: relative;
+        //     display: block;
+        //     width: 16px;
+        //     height: 16px;
+        //     margin: 0 0 30px auto;
+        //     background-image: url(../img/close.png);
+        //     -webkit-transition: -webkit-transform 0.3s;
+        //     -moz-transition: -moz-transform 0.3s;
+        //     -o-transition: -o-transform 0.3s;
+        //     transition: transform 0.3s;
+        //     background-size: 16px;
+        //     background-repeat: no-repeat;
+        // }
+
+        .panel {
+            display: none;
+            position: fixed;
+            z-index: 11111;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 10px;
+            overflow: auto;
+
+            &.active {
+                display: block;
+                position: relative;
+            }
+
+            ul {
+                li {
+                    font-size: 16px;
+                    font-weight: bold;
+                    font-family: "circularxxbold";
+                    body.rtl & {
+                        font-family: "Droid Arabic Kufi";
+                    }
+                    .title,
+                    a {
+                        padding: 15px 20px;
+                        display: block;
+                    }
+                    & ~ li {
+                        border-top: 0.3px solid #707070;
+                    }
+                    &.has-menu {
+                        .title {
+                            background-image: url(../images/dropdown.png);
+                            background-repeat: no-repeat;
+                            background-position: right 25px center;
+                            background-size: 17px;
+                            body.rtl & {
+                                background-position: left 25px center;
+                            }
+                        }
+                        &.active {
+                            .title {
+                                background-image: url(../images/dropup.png);
+                                background-color: #fbf2e8;
+                                background-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            .sub-menu {
+                display: none;
+                padding: 0 0px 30px;
+                .box {
+                    padding: 40px 15px;
+
+                    h3 {
+                        font-size: 18px;
+                        padding-bottom: 50px;
+                        padding-#{$start}: 10px;
+                        font-weight: 300;
+                        font-family: "circularxxmedium";
+                        body.rtl & {
+                            font-family: "Droid Arabic Kufi";
+                        }
+                    }
+                    .main-nav-list {
+                        li {
+                            position: relative;
+                            &:hover {
+                                &::before {
+                                    content: "";
+                                    background-image: url(../images/arrow.png);
+                                    background-color: unset;
+                                    background-repeat: no-repeat;
+                                    width: 30px;
+                                    height: 18px;
+                                    position: absolute;
+                                    background-size: contain;
+                                    #{$end}: 30px;
+                                    top: 15px;
+                                    body.rtl & {
+                                        transform: rotate(180deg);
+                                    }
+                                }
+                            }
+                            a {
+                                display: flex;
+                                justify-content: space-between;
+                                .image {
+                                    width: 40px;
+                                    padding: 0;
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                                .text {
+                                    width: calc(100% - 40px - 20px);
+                                    padding: 0;
+                                    p {
+                                        font-size: 18px;
+                                        font-family: "circularxxmedium";
+
+                                        body.rtl & {
+                                            font-family: "Droid Arabic Kufi";
+                                        }
+                                    }
+                                    .description {
+                                        padding-top: 10px;
+                                        color: #707070;
+                                        font-size: 18px;
+                                        line-height: 30px;
+                                        font-family: "circularxxmedium";
+
+                                        body.rtl & {
+                                            font-family: "Droid Arabic Kufi";
+                                        }
+                                    }
+                                }
+                            }
+                            & ~ li {
+                                border-top: none;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+                .join-us {
+                    background-color: #f9faff;
+                    margin-top: 40px;
+                    padding-top: 40px;
+                }
+            }
+
+            .demo {
+                a {
+                    font-size: 18px;
+                    background: #715aa0;
+                    color: white;
+                    padding: 19px 54px;
+                    border-radius: 10px;
+                    font-weight: bold;
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    margin: 20px 0 30px;
+                    font-family: "circularxxbold";
+
+                    body.rtl & {
+                        font-family: "Droid Arabic Kufi";
+                    }
+                }
+            }
+        }
+    }
+}
+.apps {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @media (max-width: 767px) {
+        &.active {
+            display: block;
+            background-color: #715aa0;
+            padding: 14px;
+        }
+    }
+    .single {
+        align-items: center;
+        justify-content: space-between;
+        .first {
+            display: flex;
+            column-gap: 10px;
+            align-items: center;
+            padding-#{$start}: 5px;
+        }
+        .close-app {
+            width: 16px;
+            height: 36px;
+            display: block;
+            background-image: url(../images/close.png);
+            background-size: 16px;
+            background-repeat: no-repeat;
+        }
+        .image {
+            margin: auto 0;
+            width: 50px;
+            height: 50px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .text {
+            color: white;
+            h4 {
+                font-size: 16px;
+                font-family: "circularxxmedium";
+                body.rtl & {
+                    font-family: "Droid Arabic Kufi";
+                    line-height: 23px;
+                }
+            }
+            p {
+                font-size: 12px;
+                font-family: "circularxxregular" !important;
+                body.rtl & {
+                    font-family: "Droid Arabic Kufi Regular";
+                }
+            }
+        }
+        a {
+            background-color: white;
+            border-radius: 5px;
+            color: #f08f24;
+            font-size: 11px;
+            font-family: "circularxxbold";
+            width: 80px;
+            text-align: center;
+            padding: 10px;
+            body.rtl & {
+                font-family: "Droid Arabic Kufi";
+                width: fit-content;
+            }
+        }
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */
+    .android {
+        display: none;
+    }
+    .ios {
+        display: flex;
+    }
+}
+
+@supports not (-webkit-touch-callout: none) {
+    /* CSS for other than iOS devices */
+    .android {
+        display: flex;
+    }
+    .ios {
+        display: none;
+    }
+}

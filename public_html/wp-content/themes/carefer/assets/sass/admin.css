@@ -1,0 +1,9 @@
+.order_data .order_number .address {
+  direction: rtl;
+  text-align: left;
+  } 
+
+.address{
+  direction: rtl;
+  text-align: left;
+}
